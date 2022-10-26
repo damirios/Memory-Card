@@ -1,0 +1,82 @@
+@import url('./resetStyle.css');
+
+#root {
+    height: 100%;
+}
+
+.App {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    height: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+// HEADER ================================================================================
+.header {
+    flex: 0 0 80px;
+
+    // .header__row
+    &__row {
+    }
+
+    // .header__title
+    &__title {
+    }
+
+    // .header__control-buttons
+    &__control-buttons {
+    }
+}
+
+.control-buttons {
+
+    // .control-buttons__reset-best
+    &__reset-best {
+    }
+
+    // .control-buttons__new-game
+    &__new-game {
+    }
+}
+
+// MAIN ==================================================================================
+.content {
+    flex: 1 0 auto;
+    // .content__row
+    &__row {
+
+    }
+}
+
+// Gameboard ==================================================================================
+.gameboard {
+    
+    // .gameboard__card
+    &__card {
+
+    }
+}
+
+.footer {
+
+    // .footer__row
+    &__row {
+
+    }
+
+    // .footer__title
+    &__title {
+
+    }
+
+    // .footer__link
+    &__link {
+
+    }
+}

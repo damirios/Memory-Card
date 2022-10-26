@@ -1,0 +1,24 @@
+@import url("./resetStyle.css");
+#root {
+  height: 100%;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  height: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  flex: 0 0 80px;
+}
+.content {
+  flex: 1 0 auto;
+}
