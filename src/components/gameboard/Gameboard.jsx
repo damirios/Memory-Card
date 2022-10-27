@@ -1,8 +1,8 @@
 import Card from "./Card";
 import {v4 as uuidv4} from 'uuid';
+import shuffle from '../utilities/shuffle'
 
 function Gameboard(props) {
-
     const games = [
         {title: 'The Last of Us', img: './images/TLOU.jpg', id: uuidv4()},
         {title: 'Bioshock Infinite', img: './images/Bioshock-Infinite.jpg', id: uuidv4()},
@@ -21,9 +21,11 @@ function Gameboard(props) {
         {title: 'Crash Bandicoot', img: './images/Crash-Bandicoot.jfif', id: uuidv4()}
     ];
 
+    const shuffledGames = shuffle(games);
+
     return (
         <div className="gameboard">
-            {games.map(game => {
+            {shuffledGames.map(game => {
                 return <Card title={game.title} img={game.img} key={game.id} />
             })}
         </div>
