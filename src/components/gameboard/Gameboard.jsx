@@ -5,10 +5,9 @@ import { useState } from "react";
 
 function Gameboard(props) {
     const [gamesToRender, setGamesToRender] = useState(games);
-    const [clickedTitles, setClickedTitles] = useState([]);
-
+    
     const { bestScore, currentScore, setBestScore, setCurrentScore } = props;
-
+    const { clickedTitles, setClickedTitles } = props;
 
     function gameOver() {
         setClickedTitles([]);

@@ -7,6 +7,7 @@ function Header(props) {
     }
 
     function resetCurrent() {
+        props.setClickedTitles([]);
         props.setCurrentScore(0);
     }
 

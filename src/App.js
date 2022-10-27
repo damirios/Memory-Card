@@ -10,12 +10,15 @@ function App() {
   const [bestScore, setBestScore] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
   const [gameOverWindow, setGameOverWindow] = useState(false);
+  const [clickedTitles, setClickedTitles] = useState([]);
 
   return (
     <div className="App">
-      <Header currentScore={currentScore} bestScore={bestScore} setBestScore={setBestScore} setCurrentScore={setCurrentScore}/>
+      <Header currentScore={currentScore} bestScore={bestScore} setBestScore={setBestScore} setCurrentScore={setCurrentScore}
+        setClickedTitles={setClickedTitles}/>
       <Main gameOver={gameOverWindow} setGameOver={setGameOverWindow} currentScore={currentScore} 
-        bestScore={bestScore} setBestScore={setBestScore} setCurrentScore={setCurrentScore}/>
+        bestScore={bestScore} setBestScore={setBestScore} setCurrentScore={setCurrentScore} clickedTitles={clickedTitles}
+        setClickedTitles={setClickedTitles}/>
       <Footer />
     </div>
   );
