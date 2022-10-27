@@ -1,6 +1,14 @@
-import Scoreboard from "./scoreboard/scoreboard";
+import Scoreboard from "./scoreboard/Scoreboard";
 
 function Header(props) {
+
+    function resetBest() {
+        props.setBestScore(0);
+    }
+
+    function resetCurrent() {
+        props.setCurrentScore(0);
+    }
 
     return (
         <div className="header">
@@ -17,10 +25,10 @@ function Header(props) {
                             </div>
                         </div>
                     </div>
-                    <Scoreboard />
+                    <Scoreboard {...props} />
                     <div className="header__control-buttons control-buttons">
-                        <button type='button' className="control-buttons__reset-best">Reset best score</button>
-                        <button type='button' className="control-buttons__new-game">New game</button>
+                        <button type='button' onClick={resetBest} className="control-buttons__reset-best">Reset best score</button>
+                        <button type='button' onClick={resetCurrent} className="control-buttons__new-game">New game</button>
                     </div>
                 </div>
             </div>

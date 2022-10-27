@@ -1,11 +1,11 @@
 import Gameboard from "./gameboard/Gameboard";
 
-function Main() {
+function Main(props) {
 
     return (
         <div className="content">
             <div className="content__row">
-                <Gameboard />
+                <Gameboard {...props} />
             </div>
         </div>
     );

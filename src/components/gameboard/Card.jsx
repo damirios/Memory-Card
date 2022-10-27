@@ -2,9 +2,8 @@ function Card(props) {
     const prefix = props.classPrefix;
     const {title, img} = props;
 
-
     return (
-        <div className={`${prefix}__card card`}>
+        <div onClick={props.cardClicked} className={`${prefix}__card card`}>
             <div className="card__image">
                 <img src={img} alt="game-poster" />
             </div>
