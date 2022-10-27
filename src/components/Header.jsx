@@ -6,11 +6,6 @@ function Header(props) {
         props.setBestScore(0);
     }
 
-    function resetCurrent() {
-        props.setClickedTitles([]);
-        props.setCurrentScore(0);
-    }
-
     return (
         <div className="header">
             <div className="container">
@@ -29,7 +24,7 @@ function Header(props) {
                     <Scoreboard {...props} />
                     <div className="header__control-buttons control-buttons">
                         <button type='button' onClick={resetBest} className="control-buttons__reset-best">Reset best score</button>
-                        <button type='button' onClick={resetCurrent} className="control-buttons__new-game">New game</button>
+                        <button type='button' onClick={props.resetCurrent} className="control-buttons__new-game">New game</button>
                     </div>
                 </div>
             </div>

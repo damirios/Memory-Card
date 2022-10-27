@@ -11,11 +11,12 @@ function Gameboard(props) {
 
     function gameOver() {
         setClickedTitles([]);
+        props.setGameOver(true);
         
         if (currentScore > bestScore) {
             setBestScore(currentScore);
         }
-        setCurrentScore(0);
+        // setCurrentScore(0);
     }
 
     function cardClickHandle(e) {
